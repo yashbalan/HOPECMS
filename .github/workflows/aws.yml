@@ -35,6 +35,7 @@ jobs:
               source bin/activate
               cd HOPECMS
               pip install -r requirements.txt
+              source ~/.nvm/nvm.sh &&
               pm2 restart ecmsfile
               
               
