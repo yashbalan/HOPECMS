@@ -258,7 +258,7 @@ def main_page(username):
     image = Image.open('LOGO HOPCHARGE-03.png')
     col1.image(image, use_column_width=True)
 
-    st.markdown("<h2 style='text-align: left;'>EV Charging Management System</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: left;'>EV Charging Mannagement System</h2>", unsafe_allow_html=True)
 
     col1, col2, col3, col4, col5, col6 = st.columns(6)
 
