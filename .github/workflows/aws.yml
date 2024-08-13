@@ -33,7 +33,10 @@ jobs:
               }
 
               source bin/activate
-              python test.py
+              cd HOPECMS
+              pip install -r requirements.txt
+              pm2 restart ecmsfile
+              
               
           EOF
 
