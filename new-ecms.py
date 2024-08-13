@@ -20,12 +20,12 @@ credentials = {
     "epod_user_1": {
         "username": "user1",
         "password": "password1",
-        "epods": ["EPOD-001", "EPOD-002"]
+        "epods": ["E-POD 005", "E-POD 007"]
     },
     "epod_user_2": {
         "username": "user2",
         "password": "password2",
-        "epods": ["EPOD-003", "EPOD-004"]
+        "epods": ["E-POD 010", "E-POD 011", "E-POD 012"]
     },
     # Add more users and their corresponding EPODs as needed
 }
