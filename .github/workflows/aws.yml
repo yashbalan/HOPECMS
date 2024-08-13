@@ -34,6 +34,7 @@ jobs:
 
               source bin/activate
               cd HOPECMS
+              git pull https://github.com/yashbalan/HOPECMS.git
               pip install -r requirements.txt
               source ~/.nvm/nvm.sh &&
               pm2 restart ecmsfile
