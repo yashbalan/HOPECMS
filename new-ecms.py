@@ -124,7 +124,7 @@ past_bookings_df = fetch_data(url_bookings, jwt_token)
 drivers_shifts_df = fetch_data(url_drivers, jwt_token)
 
 # Load and clean CSV data
-csv_directory_path = './newdata'
+csv_directory_path = './data'
 df_csv = get_csv_files(csv_directory_path)
 df_csv = df_csv[df_csv['canceled'] != True]
 df_csv['licensePlate'] = df_csv['licensePlate'].str.upper()
