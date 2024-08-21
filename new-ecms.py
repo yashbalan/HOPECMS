@@ -18,14 +18,34 @@ credentials = {
         "epods": "all"
     },
     "epod_user_1": {
-        "username": "user1",
-        "password": "password1",
-        "epods": ["E-POD 005", "E-POD 007"]
+        "username": "fran004",
+        "password": "hopcharge@321",
+        "epods": ["E-POD 011"]
     },
     "epod_user_2": {
-        "username": "user2",
-        "password": "password2",
-        "epods": ["E-POD 010", "E-POD 011", "E-POD 012"]
+        "username": "fran005",
+        "password": "JAhopcharge@321",
+        "epods": ["E-POD 005"]
+    },
+    "epod_user_3": {
+        "username": "fran006",
+        "password": "RYhopcharge@321",
+        "epods": ["E-POD 007"]
+    },
+    "epod_user_4": {
+        "username": "fran007",
+        "password": "ANhopcharge@321",
+        "epods": ["E-POD 012"]
+    },
+    "epod_user_5": {
+        "username": "fran008",
+        "password": "DMhopcharge@321",
+        "epods": ["E-POD 010"]
+    },
+    "epod_user_6": {
+        "username": "fran009",
+        "password": "BShopcharge@321",
+        "epods": ["E-POD 016"]
     },
     # Add more users and their corresponding EPODs as needed
 }
@@ -104,7 +124,7 @@ past_bookings_df = fetch_data(url_bookings, jwt_token)
 drivers_shifts_df = fetch_data(url_drivers, jwt_token)
 
 # Load and clean CSV data
-csv_directory_path = './data'
+csv_directory_path = './newdata'
 df_csv = get_csv_files(csv_directory_path)
 df_csv = df_csv[df_csv['canceled'] != True]
 df_csv['licensePlate'] = df_csv['licensePlate'].str.upper()
@@ -171,7 +191,8 @@ epod_start_dates = {
     "EPOD-007": "2024-03-15",
     "EPOD-010": "2024-05-10",
     "EPOD-011": "2023-11-10",
-    "EPOD-012": "2024-03-29"
+    "EPOD-012": "2024-03-29",
+    "EPOD-016": "2024-08-15"
 }
 
 for epod, start_date in epod_start_dates.items():
@@ -258,7 +279,7 @@ def main_page(username):
     image = Image.open('LOGO HOPCHARGE-03.png')
     col1.image(image, use_column_width=True)
 
-    st.markdown("<h2 style='text-align: left;'>EV Charging Mannagement System</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: left;'>EV Charging Management System</h2>", unsafe_allow_html=True)
 
     col1, col2, col3, col4, col5, col6 = st.columns(6)
 
