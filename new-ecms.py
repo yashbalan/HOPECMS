@@ -169,7 +169,8 @@ if not past_bookings_df.empty and not drivers_shifts_df.empty:
         'HR555061': 'HR55AN5061',
         'HR554745': 'HR55AR4745',
         'HR55AN1216': 'HR55AJ1216',
-        'HR55AN8997': 'HR55AN8997'
+        'HR55AN8997': 'HR55AN8997',
+        'HR554415': 'HR55AR4415',
     }
     final_df_api['licensePlate'] = final_df_api['licensePlate'].replace(replace_dict)
     final_df_api['Actual Date'] = pd.to_datetime(final_df_api['Actual Date'], errors='coerce')
@@ -192,7 +193,7 @@ epod_start_dates = {
     "EPOD-010": "2024-05-10",
     "EPOD-011": "2023-11-10",
     "EPOD-012": "2024-03-29",
-    "EPOD-016": "2024-08-15"
+    "E-POD 016": "2024-08-15",
 }
 
 for epod, start_date in epod_start_dates.items():
